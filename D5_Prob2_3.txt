@@ -1,0 +1,25 @@
+#!/bin/bash  
+
+read -p "Enter the Year: " y
+
+if [ $y -lt 9999 ] && [ $y -gt 1000 ]
+then 
+	if [ $(($y%4)) == 0 ]
+	then
+		echo "Its a Leap Year" 
+	else
+		echo "Its not a Leap Year!"
+	fi
+else
+	if [ $y -lt 999 ] && [ $y -gt 100 ] 
+	then 
+		if [ $(($y%400)) == 0 ]
+		then 
+			echo "Its Is A leap Year!"
+		else
+			echo "Its Not a Leap Year"
+		fi
+	else
+		echo "Its Not A Leap Year"
+	fi
+fi

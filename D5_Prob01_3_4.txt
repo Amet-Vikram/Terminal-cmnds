@@ -1,11 +1,14 @@
 #!/bin/bash 
 
+num=()
 for i in {0..4} 
 	do
 		x=$((RANDOM%100))
 		sum=$(($sum+$x))
+		num+=($x)
 done 
 avg=$(($sum/5))
+echo "The numbers are: " "${num[@]}"
 printf "Sum of 5 random digits is:%d %b\n" "$sum"
 printf "Average is:%f" "$avg"
 
