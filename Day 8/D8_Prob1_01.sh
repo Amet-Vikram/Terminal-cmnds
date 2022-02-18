@@ -58,8 +58,28 @@ do
 		break
 	fi
 done
-
 echo ${dice[@]}
+
+max=0
+min=10
+for k in "${!dice[@]}";
+do	
+	
+	if [ ${dice[$k]} -gt $max ];
+	then
+		max=${dice[$k]}
+		max_key="$k"
+    fi
+	
+	if [ ${dice[$k]} -lt $min ];
+	then
+		min=${dice[$k]}
+		min_key="$k"
+    fi
+done
+
+echo "Number that rolled Max times is: "$max_key
+echo "Number that rolled Min times is: "$min_key
 
 
 
