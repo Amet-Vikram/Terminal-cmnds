@@ -1,0 +1,25 @@
+#!/bin/bash
+
+read -p "Enter the number of day: " d
+
+if [ $d == 1 ]
+then
+   echo "Monday"
+elif [ $d == 2 ]
+then
+   echo "Tuesday"
+elif [ $d == 3 ]
+then
+   echo "Wednesday"
+elif [ $d == 4 ]
+then
+   echo "Thrusday"
+elif [ $d == 5 ]
+then
+   echo "Friday"
+elif [ $d == 6 ]
+then
+   echo "Saturday"
+else 
+   echo "Sunday"
+fi

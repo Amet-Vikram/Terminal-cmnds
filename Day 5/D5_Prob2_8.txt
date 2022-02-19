@@ -1,0 +1,44 @@
+#!/bin/bash
+
+read -p "Enter The 3 Numbers: " a b c
+
+o1=$(($a+($b*$c)))
+f=$(($a%$b))
+o2=$(($f+$c))
+o3=$(($c+($a/$b)))
+o4=$((($a*$b)+$c))
+
+echo "Solutions are: " $o1 $o2 $o3 $o4
+
+if [ $o1 -gt $o2 ] && [ $o1 -gt $o3 ] && [ $o1 -gt $o4 ]
+then
+	echo "Maximum: " $o1
+elif [ $o2 -gt $o1 ] && [ $o2 -gt $o3 ] && [ $o2 -gt $o4 ]
+then 
+	echo "Maximum: " $o2
+elif [ $o3 -gt $o1 ] && [ $o3 -gt $o2 ] && [ $o3 -gt $o4 ]
+then
+   echo "Maximum: " $o3
+else
+	echo "Maximum: " $o4
+fi
+
+if [ $o1 -lt $o2 ] && [ $o1 -lt $o3 ] && [ $o1 -lt $o4 ]
+then
+   echo "Minimum: " $o1
+elif [ $o2 -lt $o1 ] && [ $o2 -lt $o3 ] && [ $o2 -lt $o4 ]
+then
+   echo "Minimum: " $o2
+elif [ $o3 -lt $o1 ] && [ $o3 -lt $o2 ] && [ $o3 -lt $o4 ]
+then
+   echo "Minimum: " $o3
+else
+   echo "Minimum: " $o4
+fi
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+read -p "Enter the Value: " d
+read -p "Select Conversion (options: 1. Ft-Inch 2. Ft-Mt 3.Inch-Ft 4. Mt-Ft): " o
+
+case $o in 
+	1) 
+		awk -v a="$d" 'BEGIN {print a*12 }'
+		;;
+	2)
+   		awk -v a="$d" 'BEGIN {print a/3.281 }'
+		;;
+	3)
+   		awk -v a="$d" 'BEGIN {print a/12 }'
+		;;
+	4)
+   		awk -v a="$d" 'BEGIN {print a*3.281 }'
+		;;
+esac

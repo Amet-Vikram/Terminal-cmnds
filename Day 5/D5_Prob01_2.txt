@@ -1,0 +1,12 @@
+#!/bin/bash 
+
+x=$((RANDOM%7))
+echo "First Roll: " $x
+
+y=$((RANDOM%7))
+echo "Second Roll: " $y
+
+sum=$(($x+$y))
+echo "Sum is: " $sum 
+
+

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+read -p "Enter the number: " d
+
+if [ $(($d%10000)) == 0 ]
+then
+   echo "Ten-Thousand"
+elif [ $(($d%1000)) == 0 ]
+then
+   echo "Thousand"
+elif [ $(($d%100)) == 0 ]
+then
+   echo "Hundered"
+elif [ $(($d%10)) == 0 ]
+then
+   echo "Ten"
+else
+	echo "One"
+fi
+

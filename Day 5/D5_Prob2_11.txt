@@ -1,0 +1,27 @@
+#!/bin/bash
+
+read -p "Enter the Number: " d
+
+case $d in 
+	1) 
+		echo "One"
+		;;
+	2)
+   		echo "Ten"
+		;;
+	3)
+   		echo "Hundred"
+		;;
+	4)
+   		echo "Thousand"
+		;;
+	5)
+   		echo "Ten-Thosand"
+		;;
+	6)
+   		echo "Lakhs"
+		;;
+	7)
+   		echo "Ten-Lakhs"
+		;;
+esac
